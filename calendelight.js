@@ -1,7 +1,4 @@
-//TODO: wait for table to actually load (not arbitrarty timeout)
-//TODO: pretty css or icon for the button
-//TODO: remove extension icon from chrome menu
-
+//TODO: wait for a table to actually load (not arbitrarty timeout)
 
 setTimeout(function () {
 
@@ -10,7 +7,7 @@ setTimeout(function () {
         addButtonToRow(rows[i])
     }
 
-}, 1000);
+}, 1500);
 
 function findRowsWithScheduledClasses() {
     var booked_table = document.getElementById("booked")
@@ -39,7 +36,7 @@ function addButtonToRow(row) {
 
     var base_url = "http://www.google.com/calendar/event?action=TEMPLATE&trp=true"
     var calendar_url = base_url + "&text=" + text_param + "&dates=" + dates_param + "&location=" + location_param
-    var button = "<a class=\"btn btn-default\" target=\"_blank\" href=\"" + calendar_url + "\"> Add to calendar </a>"
+    var button = "<a class=\"calendelight-button\" target=\"_blank\" href=\"" + calendar_url + "\"> Add to calendar </a>"
 
     cells[4].innerHTML += button
 }
