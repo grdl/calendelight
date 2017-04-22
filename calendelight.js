@@ -51,6 +51,8 @@ function getAddressOfLocation(location) {
             return "Delight Yoga, Nieuwe Achtergracht 11-13, Amsterdam"
         case "Prinseneiland":
             return "Delight Yoga, Prinseneiland 20G, Amsterdam"
+        case "Scheveningseweg":
+            return "Delight Yoga, Scheveningseweg 14, Den Haag"
         default:
             return "Delight Yoga, " + location
     }
