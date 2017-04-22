@@ -30,9 +30,9 @@ function addButtonToRow(row) {
     var formatted_end_hour = "T" + end_hour.trim().replace(":", "") + "00"
     var formatted_date = moment(class_date.trim(), "D MMM YYYY").format("YYYYMMDD")
 
-    var dates_param = "" + formatted_date + formatted_start_hour + "/" + formatted_date + formatted_end_hour
-    var text_param = "Yoga: " + class_type + " with " + teacher
-    var location_param = getAddressOfLocation(location)
+    var dates_param = encodeURIComponent("" + formatted_date + formatted_start_hour + "/" + formatted_date + formatted_end_hour)
+    var text_param = encodeURIComponent("Yoga: " + class_type + " with " + teacher)
+    var location_param = encodeURIComponent(getAddressOfLocation(location))
 
     var base_url = "http://www.google.com/calendar/event?action=TEMPLATE&trp=true"
     var calendar_url = base_url + "&text=" + text_param + "&dates=" + dates_param + "&location=" + location_param
